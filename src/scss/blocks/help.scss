@@ -1,0 +1,108 @@
+.help {
+    position: relative;
+    background: url('../img/example/line.svg') no-repeat 0% 16%/ cover;
+    &__container {
+        padding-bottom: 70px;
+        padding-left: 120px;
+        padding-right: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bg {
+        margin-top: -130px;
+        width: 55%;
+        object-fit: contain;
+    }
+    &__title {
+        text-align: left;
+        padding: 20px 120px;
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    &__title-text {
+        display: block;
+        max-width: 380px;
+    }
+    &__descr:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+        margin-right: 30px;
+    }
+    &__btn {
+        margin-top: auto;
+        align-self: flex-start;
+        padding: 35px 75px;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 992px) {
+    .help {
+        &__container {
+            flex-direction: column-reverse;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        &__bg {
+            margin-top: 0;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__text {
+            max-width: 100%;
+            margin-right: 0;
+        }
+        &__btn {
+            align-self: center;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .help {
+        &__container {
+            padding: 0 25px 40px;
+        }
+        background: none;
+        &__bg {
+            margin-bottom: 15px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+        &__descr:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &__title {
+            position: relative;
+            background: none;
+            box-shadow: none;
+            max-width: 100%;
+            padding: 0 25px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            &::before {
+                content: '';
+                position: absolute;
+                background: url('../img/gold-gradient.svg') no-repeat left center/ cover;
+                top: -30px;
+                left: 0;
+                height: 23px;
+                width: 80%;
+                border-top-right-radius: 40px;
+                border-bottom-right-radius: 40px;
+            }
+        }
+        &__title-text {
+            max-width: 100%;
+        }
+        &__btn {
+            padding: 20px 30px;
+            font-size: 16px;
+        }
+    }
+}

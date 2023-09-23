@@ -1,0 +1,168 @@
+ html {
+     box-sizing: border-box;
+     font-size: 16px;
+ }
+ 
+ *,
+ *::before,
+ *::after {
+     box-sizing: inherit;
+ }
+ 
+ body {
+     font-family: $main_ff, sans-serif;
+     min-width: 320px;
+     font-size: $main_fz;
+     margin: 0;
+     color: $black;
+ }
+ 
+ .container {
+     margin: 0 auto;
+     padding: 0 60px;
+     max-width: 1440px;
+ }
+ 
+ img {
+     display: block;
+     max-width: 100%;
+ }
+ 
+ .link-reset {
+     text-decoration: none;
+     color: inherit;
+ }
+ 
+ .link-reset:focus {
+     outline: none;
+ }
+ 
+ .list-reset {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+ 
+ .input-reset {
+     border: none;
+     padding: 0;
+     max-width: 100%;
+     background: transparent;
+     color: inherit;
+     &::placeholder {
+         color: inherit;
+     }
+ }
+ 
+ .input-reset:focus {
+     outline: none;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+     margin: 0;
+ }
+ 
+ .btn-reset {
+     padding: 0;
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     font: inherit;
+     color: inherit;
+ }
+ 
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+     display: none;
+ }
+ 
+ .ff-merriweather {
+     font-family: 'Merriweather';
+     font-style: italic;
+ }
+ 
+ .gold-gradient {
+     background: url('../img/gold-gradient.svg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     box-shadow: 0px 3px 1.5px 0px #FFFFFF66 inset;
+     box-shadow: 0px -3px 1.5px 0px #00000080 inset;
+ }
+ 
+ .gradient-diagonal {
+     background: url('../img/gradient-diagonal.svg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     box-shadow: 0px 3px 1.5px 0px #FFFFFF66 inset;
+     box-shadow: 0px -3px 1.5px 0px #00000080 inset;
+ }
+ 
+ .d-flex {
+     display: flex;
+ }
+ 
+ .d-block {
+     display: block;
+ }
+ 
+ .d-none {
+     display: none;
+ }
+ 
+ .overflowYHidden {
+     overflow-y: hidden;
+ }
+ 
+ .section-title {
+     font-size: 50px;
+     font-family: 'Merriweather';
+     font-style: italic;
+     text-align: center;
+ }
+ 
+ .ttUpperCase {
+     text-transform: uppercase;
+ }
+ 
+ .w-600 {
+     font-weight: 600;
+ }
+ 
+ .line-decor {
+     position: relative;
+     &::before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         left: 0;
+         top: calc(100% + 6px);
+         right: 0;
+         height: 12px;
+         background: url('../img/line-decor.svg') no-repeat center /contain;
+     }
+ }
+ 
+ @media(max-width: 768px) {
+     .container {
+         padding-left: 40px;
+         padding-right: 40px;
+     }
+ }
+ 
+ @media(max-width: 576px) {
+     .container {
+         padding-left: 25px;
+         padding-right: 25px;
+     }
+     .section-title {
+         font-size: 24px;
+     }
+ }

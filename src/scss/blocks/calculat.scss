@@ -1,0 +1,176 @@
+.calculat {
+    background: url('../img/calculate/bg.png') no-repeat center/cover;
+    overflow: hidden;
+    padding-top: 80px;
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 530px;
+        margin: 0 auto;
+        color: $white;
+    }
+    &__form {
+        margin-bottom: 100px;
+    }
+    &__input {
+        border-bottom: 2px solid $white;
+        padding: 12px 0;
+    }
+    &__input:first-child {
+        margin-bottom: 50px;
+    }
+    &__input:nth-child(2) {
+        margin-bottom: 70px;
+    }
+    &__title {
+        margin-bottom: 25px;
+        color: $white;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__btn {
+        padding: 35px 120px;
+        color: $black;
+    }
+    &__bottom {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(auto, 600px) minmax(auto, 460px);
+        justify-content: center;
+        gap: 100px;
+        padding: 100px 30px 80px;
+        width: 100%;
+        >* {
+            z-index: 1;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 500px);
+            border-top-right-radius: 100%;
+            border-top-left-radius: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            background: $white;
+            z-index: 0;
+        }
+    }
+    &__subtitle {
+        max-width: 50%;
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+    &__address {
+        font-style: normal;
+        margin-bottom: 16px;
+    }
+    &__email {
+        margin-bottom: 40px;
+    }
+    &__phone {
+        font-size: 50px;
+        color: #A88849;
+    }
+}
+
+.user {
+    &__img {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    &__descr {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 992px) {
+    .calculat {
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            background: $white;
+            &::before {
+                display: none;
+            }
+        }
+        &__title {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+    .user {
+        display: flex;
+        &__img {
+            order: 1;
+            margin-bottom: 0;
+        }
+        &__descr {
+            color: #797979;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .calculat {
+        padding-top: 20px;
+        &__title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        &__form {
+            padding-bottom: 200px;
+            margin-bottom: 0;
+        }
+        &__form-container {
+            padding-left: 25px;
+            padding-right: 25px;
+            max-width: 80%;
+        }
+        &__input {
+            padding: 6px 0;
+            font-size: 10px;
+        }
+        &__input:first-child {
+            margin-bottom: 27px;
+        }
+        &__input:nth-child(2) {
+            margin-bottom: 60px;
+        }
+        &__btn {
+            font-size: 16px;
+            padding: 20px 60px;
+            align-self: center;
+        }
+        &__bottom {
+            padding: 40px 25px;
+            gap: 15px;
+        }
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 12px;
+            max-width: 190px;
+        }
+        &__email,
+        &__address {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        &__phone {
+            font-size: 20px;
+        }
+    }
+    .user {
+        &__img {
+            max-width: 40%;
+        }
+        &__title {
+            font-size: 15px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+    }
+}

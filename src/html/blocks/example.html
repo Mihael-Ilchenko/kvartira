@@ -1,0 +1,30 @@
+<section class="example section">
+    <div class="example__container container">
+        <h2 class="example__title section-title">Примеры застройщиков, с которыми мы работаем
+        </h2>
+        <div class="example__content">
+            <div class="example__swiper swiper-container">
+                <div class="swiper-wrapper">
+                    @@include('./exampleList.html', {})
+                </div>
+
+            </div>
+            <div class="swiper-button-prev">
+                <svg viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.1538 2L3 12.8738L15 22" stroke="#887143" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+
+            </div>
+            <div class="swiper-button-next">
+                <svg viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 2L15 12.8738L2 22" stroke="#887143" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+
+            </div>
+            <div class="example__list example__list-mobile">
+                @@include('./exampleList.html', {})
+            </div>
+        </div>
+        <button class="example__btn gold-gradient w-600 btn-reset">Смотреть все</button>
+    </div>
+</section>

@@ -1,0 +1,224 @@
+.hero {
+    background: url('../img/hero/bg.png') no-repeat center/cover;
+    height: 77.1vw;
+    min-height: 1100px;
+    position: relative;
+    &__container {
+        height: 100%;
+    }
+    &-wrap {
+        height: 100%;
+    }
+    &__title {
+        margin-bottom: 28px;
+        text-align: left;
+    }
+    &__descr {
+        margin-bottom: 68px;
+    }
+    &__left {
+        padding-top: 100px;
+        width: 40%;
+    }
+    &__right {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        background: #2E2E2EB2;
+        max-width: 60%;
+        height: 100%;
+        padding: 0 39px;
+        padding-top: 100px;
+        padding-bottom: 185px;
+        right: 0;
+    }
+    &__right-content {
+        max-width: 80%;
+        padding-top: 115px;
+        padding-bottom: 150px;
+        margin-right: 50px;
+    }
+    &__bottom {
+        position: absolute;
+        background: url('../img/hero/bg-white.svg') no-repeat center bottom/ cover;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: -1px;
+    }
+    &__btn {
+        padding: 30px 60px;
+        color: $black;
+        font-weight: 600;
+        white-space: nowrap;
+        ;
+    }
+    &-soc {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        &__item:not(:last-child) {
+            margin-bottom: 35px;
+        }
+        &__decor {
+            width: 2px;
+            height: 100%;
+            max-height: 315px;
+            border-radius: 4px;
+            background: $white;
+        }
+    }
+}
+
+.possibility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    padding-top: 100px;
+    &__item {
+        display: flex;
+        justify-content: center;
+        max-width: 300px;
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    &__text {
+        align-self: flex-start;
+        text-shadow: 4px 4px 4px #000000;
+    }
+    &__img {
+        margin-top: 25px;
+        margin-right: -10px;
+    }
+}
+
+.advant {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 350px;
+    }
+    &__item:nth-child(2) {
+        bottom: 40px;
+    }
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 92px;
+        height: 92px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
+@media(max-width: 992px) {
+    .hero {
+        min-height: 750px;
+        &__left {
+            display: none;
+        }
+        &__right {
+            max-width: 90%;
+            right: auto;
+            left: 0;
+            padding-left: 60px;
+            padding-bottom: 20px;
+        }
+        &__right-content {
+            max-width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__bottom {
+            position: static;
+            background: $white;
+        }
+    }
+    .advant {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 10px 50px 55px;
+        &__item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &__item:nth-child(2) {
+            bottom: 0
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .hero {
+        &-soc {
+            display: none;
+        }
+        &__right-content {
+            margin-right: 0;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .hero {
+        min-height: 485px;
+        &__right {
+            height: 80%;
+            min-width: 300px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__descr {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        &__btn {
+            padding: 20px 27px;
+            font-size: 16px;
+        }
+    }
+    .advant {
+        align-items: center;
+        font-size: 16px;
+        padding: 25px 25px 50px;
+        &__item {
+            flex-direction: row;
+            width: 100%;
+        }
+        &__number {
+            width: 39px;
+            height: 39px;
+            margin-bottom: 0;
+            margin-right: 26px;
+        }
+        &__text {
+            text-align: left;
+        }
+    }
+}
